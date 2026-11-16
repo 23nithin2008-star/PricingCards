@@ -1,0 +1,265 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #10172a, #202d50);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Main Section */
+.pricing-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 25px;
+}
+
+/* Heading */
+.heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.subtitle {
+    color: #8b9cff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.heading h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #c0c8dc;
+    line-height: 1.6;
+}
+
+/* Billing Toggle */
+.billing-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 45px;
+}
+
+.billing-toggle button {
+    background: transparent;
+    color: white;
+    border: 1px solid #64748b;
+    padding: 11px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.billing-toggle button.active {
+    background: #647cff;
+    border-color: #647cff;
+}
+
+.billing-toggle button:focus-visible,
+.plan-button:focus-visible {
+    outline: 3px solid #facc15;
+    outline-offset: 4px;
+}
+
+.save-label {
+    background: #183d35;
+    color: #6ee7b7;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Pricing Cards */
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: center;
+}
+
+.card {
+    background: #ffffff;
+    color: #1e293b;
+    padding: 35px 28px;
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.plan-description {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Price */
+.price-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.currency {
+    font-size: 23px;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.price {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.unit {
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* Features */
+.card ul {
+    list-style: none;
+    margin: 30px 0;
+}
+
+.card li {
+    margin-bottom: 17px;
+    color: #475569;
+    font-size: 14px;
+}
+
+/* Buttons */
+.plan-button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #e8ecff;
+    color: #4357c9;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.plan-button:hover {
+    background: #647cff;
+    color: white;
+}
+
+/* Popular Card */
+.popular {
+    border: 3px solid #647cff;
+    transform: scale(1.04);
+    z-index: 1;
+}
+
+.popular:hover {
+    transform: scale(1.04) translateY(-6px);
+}
+
+.popular .plan-button {
+    background: #647cff;
+    color: white;
+}
+
+.popular .plan-button:hover {
+    background: #4357c9;
+}
+
+.ribbon {
+    position: absolute;
+    top: 17px;
+    right: -32px;
+    background: #647cff;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 8px 35px;
+    transform: rotate(45deg);
+}
+
+/* Footer */
+.footer-text {
+    text-align: center;
+    color: #c0c8dc;
+    margin-top: 45px;
+    font-size: 14px;
+}
+
+/* Tablet and Mobile */
+@media (max-width: 800px) {
+    .pricing-container {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: auto;
+    }
+
+    .popular {
+        order: -1;
+        transform: none;
+    }
+
+    .popular:hover {
+        transform: translateY(-6px);
+    }
+
+    .heading h1 {
+        font-size: 30px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+    .pricing-section {
+        padding: 45px 15px;
+    }
+
+    .heading h1 {
+        font-size: 26px;
+    }
+
+    .card {
+        padding: 30px 22px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .card,
+    .billing-toggle button,
+    .plan-button {
+        transition: none;
+    }
+
+    .card:hover,
+    .popular:hover {
+        transform: none;
+    }
+}

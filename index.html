@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <section class="pricing-section">
+
+        <div class="heading">
+            <p class="subtitle">SIMPLE & TRANSPARENT PRICING</p>
+            <h1>Choose Your Perfect Plan</h1>
+            <p class="description">
+                Flexible plans designed to help you grow.
+                Start small and upgrade whenever you need.
+            </p>
+        </div>
+
+        <!-- Billing Toggle -->
+        <div class="billing-toggle">
+            <button id="monthly" class="active"
+                aria-pressed="true">Monthly</button>
+
+            <button id="yearly"
+                aria-pressed="false">Yearly</button>
+
+            <span class="save-label">Save 20%</span>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="pricing-container">
+
+            <!-- Starter Plan -->
+            <article class="card">
+                <h2>Starter</h2>
+                <p class="plan-description">Perfect for beginners</p>
+
+                <div class="price-box">
+                    <span class="currency">₹</span>
+                    <span class="price"
+                        data-monthly="199"
+                        data-yearly="1910">199</span>
+                </div>
+                <p class="unit">per month</p>
+
+                <ul>
+                    <li>✓ Basic features</li>
+                    <li>✓ 5 projects</li>
+                    <li>✓ Email support</li>
+                    <li>✓ Basic analytics</li>
+                    <li>✓ 1 user account</li>
+                </ul>
+
+                <button class="plan-button">Get Started</button>
+            </article>
+
+            <!-- Pro Plan -->
+            <article class="card popular">
+
+                <div class="ribbon">MOST POPULAR</div>
+
+                <h2>Pro</h2>
+                <p class="plan-description">Best for professionals</p>
+
+                <div class="price-box">
+                    <span class="currency">₹</span>
+                    <span class="price"
+                        data-monthly="499"
+                        data-yearly="4790">499</span>
+                </div>
+                <p class="unit">per month</p>
+
+                <ul>
+                    <li>✓ All Starter features</li>
+                    <li>✓ Unlimited projects</li>
+                    <li>✓ Priority support</li>
+                    <li>✓ Advanced analytics</li>
+                    <li>✓ 5 user accounts</li>
+                </ul>
+
+                <button class="plan-button">Choose Pro</button>
+            </article>
+
+            <!-- Team Plan -->
+            <article class="card">
+                <h2>Team</h2>
+                <p class="plan-description">Perfect for growing teams</p>
+
+                <div class="price-box">
+                    <span class="currency">₹</span>
+                    <span class="price"
+                        data-monthly="999"
+                        data-yearly="9590">999</span>
+                </div>
+                <p class="unit">per month</p>
+
+                <ul>
+                    <li>✓ All Pro features</li>
+                    <li>✓ Unlimited projects</li>
+                    <li>✓ 24/7 support</li>
+                    <li>✓ Team analytics</li>
+                    <li>✓ Unlimited users</li>
+                </ul>
+
+                <button class="plan-button">Choose Team</button>
+            </article>
+
+        </div>
+
+        <p class="footer-text">Simple pricing. No hidden charges.</p>
+
+    </section>
+
+</body>
+</html>
+    
