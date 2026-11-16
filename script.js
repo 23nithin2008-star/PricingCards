@@ -46,3 +46,14 @@ yearlyButton.addEventListener("click", function() {
 
 // Default billing period
 setPeriod("monthly");
+
+// Plan selection buttons
+const planButtons = document.querySelectorAll(".plan-button");
+
+planButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+        const selectedPlan = button.textContent.trim();
+
+        alert("Thank you for choosing " + selectedPlan + "!");
+    });
+});
